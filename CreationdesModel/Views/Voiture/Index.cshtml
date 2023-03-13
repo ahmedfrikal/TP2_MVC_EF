@@ -1,0 +1,81 @@
+﻿
+@model List<Voiture>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">photo</th>
+            <th scope="col">Matricule</th>
+            <th scope="col">Marque</th>
+            <th scope="col">sortie</th>
+            <th scope="col">Assurances</th>
+            <th scope="col">Locations</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Voiture v in Model){
+        <tr>
+            <td><img src="~/images/@v.photo" > </td>
+            <td>@v.Matricule</td>
+            <td>@v.marque.Libelle</td>
+             <td>
+                <ul class="list-group">
+             @foreach (Assurance assurance in v.Assurances)
+             {  
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                       @assurance.agence
+                                <p class="badge badge-primary badge-pill">@assurance.agence</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        @assurance.date_debut
+                                <p class="badge badge-primary badge-pill">      @assurance.date_debut</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                       @assurance.date_fin
+                        <span class="badge badge-primary badge-pill">@assurance.date_fin </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        @assurance.prix
+                        <span class="badge badge-primary badge-pill">@assurance.prix </span>
+                    </li>
+                   }
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Somme Total :  @v.prixAssurance DH
+                        </li>
+                 </ul>
+
+            </td>
+
+            <td>
+            <ul class="list-group">
+                @foreach (Location location in v.Locations)
+                {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @location.date_debut
+                    
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @location.date_fin
+                    <span class="badge badge-primary badge-pill">date fin</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @location.prix_jour Dh
+                
+                </li>
+                 }
+                 <li class="list-group-item d-flex justify-content-between align-items-center">
+                   Prix Total des Location:  @v.prixLocation Dh
+                  </li>
+            </ul>
+            </td>
+            <td> 
+                <a asp-action="update" asp-controller="Voiture" asp-route-id="@v.Id" class="btn btn-outline-success"> Modifier </a>
+                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-danger"> Suprimer </a>
+                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-secondary"> Ajouter Assurance </a>
+                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-info"> Ajouter Location </a>
+                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-warning"> Retour Locations </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

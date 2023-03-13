@@ -1,0 +1,39 @@
+﻿@model Voiture
+
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="Matricule"></label>
+        <input asp-for="Matricule" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NbrPortes"></label>
+        <input asp-for="NbrPortes" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NbrPlaces"></label>
+        <input asp-for="NbrPlaces" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="photo"></label>
+        <input type="file" name="image" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="couleur"></label>
+        <input type="color" asp-for="couleur" class="form-control" />
+    </div>
+
+
+
+    <div class="form-group">
+        <label asp-for="marqueId"></label>
+        <select asp-for="marqueId" class="form-control" asp-items="@ViewBag.citie"></select>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Update  voiture" />
+    </div>
+</form>

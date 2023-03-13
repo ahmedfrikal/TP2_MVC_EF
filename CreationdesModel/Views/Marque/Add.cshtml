@@ -1,0 +1,13 @@
+﻿
+@model Marque
+
+<form action="#" method="post">
+<div class="mb-3 row">
+    <label for="Libelle" class="col-sm-2 col-form-label">Libelle</label>
+    <div class="col-sm-10">
+        <input asp-for="Libelle" class="form-control" id="Libelle">
+    </div>
+    <span asp-validation-for="Libelle"> </span>
+</div>
+<button type="submit" class="btn btn-primary mb-3">Add Marque</button>
+</form>
