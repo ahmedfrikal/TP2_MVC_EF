@@ -1,12 +1,14 @@
 ﻿
 @model List<Voiture>
+
+
+<a asp-controller="Voiture" asp-action="Add" class="btn btn-outline-primary">Ajouter Voiture </a>
 <table class="table">
     <thead>
         <tr>
             <th scope="col">photo</th>
             <th scope="col">Matricule</th>
             <th scope="col">Marque</th>
-            <th scope="col">sortie</th>
             <th scope="col">Assurances</th>
             <th scope="col">Locations</th>
             <th scope="col">Actions</th>
@@ -70,7 +72,7 @@
             </td>
             <td> 
                 <a asp-action="update" asp-controller="Voiture" asp-route-id="@v.Id" class="btn btn-outline-success"> Modifier </a>
-                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-danger"> Suprimer </a>
+                <a asp-action="delete" asp-controller="Voiture" asp-route-id="@v.Id" class="btn btn-outline-danger"> Suprimer </a>
                 <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-secondary"> Ajouter Assurance </a>
                 <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-info"> Ajouter Location </a>
                 <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-warning"> Retour Locations </a>

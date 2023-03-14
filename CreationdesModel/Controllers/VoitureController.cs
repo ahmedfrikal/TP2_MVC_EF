@@ -113,9 +113,9 @@ namespace CreationdesModel.Controllers
         }
         public IActionResult Delete(int id)
         {
-            int voitureAssuranceNombre = db.locations.Where(l => l.Retour == false && l.voitureId==id).Count();
+            int voitureLocationeNombre = db.locations.Where(l => l.Retour == false && l.voitureId==id).Count();
              
-            if (voitureAssuranceNombre ==0)
+            if (voitureLocationeNombre == 0)
             {
                List<Assurance> assurance = db.assurances.Where(e => e.voitureID.Equals(id)).ToList();
                 if (assurance.Count != 0)
@@ -127,13 +127,15 @@ namespace CreationdesModel.Controllers
                 }
                 Voiture voiture = db.Voitures.Find(id);
                 db.Voitures.Remove(voiture);
+                db.SaveChanges();
             }
+       
             else
             {
                 return RedirectToAction(nameof(Index));
             }
-            return View();
-      
+            return RedirectToAction(nameof(Index));
+
         }
     }
 }

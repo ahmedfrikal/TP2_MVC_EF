@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Liste des Assurances";
+}
+
+@model List<Assurance>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Agence</th>
+            <th scope="col">Date Debut</th>
+            <th scope="col">Date fin</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Voitures</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Assurance assurance in Model){
+        <tr>
+            <td> @assurance.agence </td>
+            <td> @assurance.date_debut </td>
+            <td>@assurance.date_fin</td>
+            <td>@assurance.prix</td>
+            <td>@assurance.voiture.Matricule </td>
+             <td>
+                    <a asp-action="Edit" asp-controller="Assurance" asp-route-id="@assurance.Id" class="btn btn-outline-success"> Modifier </a>
+                    <a asp-action="delete" asp-controller="Voiture" asp-route-id="@assurance.Id" class="btn btn-outline-danger"> Suprimer </a>
+              </td>
+        </tr>
+        }
+    </tbody>
+</table>
