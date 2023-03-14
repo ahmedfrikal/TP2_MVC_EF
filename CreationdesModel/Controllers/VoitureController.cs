@@ -91,7 +91,6 @@ namespace CreationdesModel.Controllers
             if (image == null)
             {
                 voitureModif.photo = voiture.photo;
-                db.SaveChanges();
             }
             else
             {
