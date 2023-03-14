@@ -10514,11 +10514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\CreationdesModel\\CreationdesModel.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\TP2_ASP_EFF\\TP2_MVC_EF\\CreationdesModel\\CreationdesModel.csproj",
       "projectName": "CreationdesModel",
-      "projectPath": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\CreationdesModel\\CreationdesModel.csproj",
+      "projectPath": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\TP2_ASP_EFF\\TP2_MVC_EF\\CreationdesModel\\CreationdesModel.csproj",
       "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\CreationdesModel\\obj\\",
+      "outputPath": "C:\\Users\\Ahmed\\OneDrive\\Bureau\\Mon Espace de travail\\EHEI\\4eme anné\\Semestre2\\ASP\\CreationdesModel\\TP2_ASP_EFF\\TP2_MVC_EF\\CreationdesModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",

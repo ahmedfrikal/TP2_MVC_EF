@@ -68,6 +68,7 @@ namespace CreationdesModel.Controllers
         }
         public IActionResult update(int id)
         {
+            
             Voiture voiture = db.Voitures.Find(id);
             ViewBag.citie = db.marques.Select(m => new SelectListItem
             {
@@ -81,9 +82,15 @@ namespace CreationdesModel.Controllers
 
         public IActionResult update(Voiture voiture, IFormFile image)
         {
-            if (voiture.photo == null)
+            Voiture  voitureModif = db.Voitures.Find(voiture.Id);
+            voitureModif.Matricule = voiture.Matricule;
+            voitureModif.NbrPortes = voiture.NbrPortes;
+            voitureModif.NbrPlaces = voiture.NbrPlaces;
+            voitureModif.couleur = voiture.couleur;
+            voitureModif.marque = voiture.marque;
+            if (image == null)
             {
-                db.Voitures.Update(voiture);
+                voitureModif.photo = voiture.photo;
                 db.SaveChanges();
             }
             else
@@ -98,15 +105,12 @@ namespace CreationdesModel.Controllers
                         string uploadFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images", fileName);
                         var stream = new FileStream(uploadFilePath, FileMode.Create);
                         image.CopyToAsync(stream);
-                        voiture.photo = fileName;
-
-                        db.Voitures.Add(voiture);
-                        db.SaveChanges();
-                        return RedirectToAction(nameof(Index));
+                        voitureModif.photo = fileName;
                     }
                 }
             }
-            return View();
+            db.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
         public IActionResult Delete(int id)
         {
