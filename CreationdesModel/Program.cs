@@ -1,4 +1,5 @@
 using CreationdesModel.Models;
+using Faker;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,5 +30,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Voiture}/{action=index}/{id?}");
+
 
 app.Run();

@@ -566,3 +566,5 @@ C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\A
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\CreationdesModel.pdb
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\CreationdesModel.genruntimeconfig.cache
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\ref\CreationdesModel.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Faker.Net.6.0.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\de-DE\Faker.Net.6.0.resources.dll

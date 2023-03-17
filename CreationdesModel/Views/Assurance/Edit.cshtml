@@ -1,8 +1,7 @@
-﻿
-@model Assurance
+﻿@model Assurance
 <form action="#" method="post">
     <div class="mb-3 row">
-        <label for="Libelle" class="col-sm-2 col-form-label">Libelle</label>
+        <label asp-for="agence" for="Libelle" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
             <input asp-for="agence" class="form-control" id="Libelle">
         </div>
@@ -10,7 +9,7 @@
     </div>
 
     <div class="mb-3 row">
-        <label for="Libelle" class="col-sm-2 col-form-label">Libelle</label>
+        <label asp-for="date_debut" for="Libelle" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
             <input asp-for="date_debut" class="form-control" id="Libelle">
         </div>
@@ -19,7 +18,7 @@
 
 
     <div class="mb-3 row">
-        <label for="Libelle" class="col-sm-2 col-form-label">Libelle</label>
+        <label asp-for="date_fin"  class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
             <input asp-for="date_fin" class="form-control" id="Libelle">
         </div>
@@ -29,7 +28,7 @@
 
 
     <div class="mb-3 row">
-        <label for="Libelle" class="col-sm-2 col-form-label">Libelle</label>
+        <label asp-for="prix" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
             <input asp-for="prix" class="form-control" id="Libelle">
         </div>

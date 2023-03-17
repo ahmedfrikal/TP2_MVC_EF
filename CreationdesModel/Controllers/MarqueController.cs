@@ -14,8 +14,8 @@ namespace CreationdesModel.Controllers
         }
 
         public IActionResult Index()
-        
         {
+            
             List<Marque> marques = _context.marques.Include(m => m.Voitures).ToList();
             return View(marques);
         }

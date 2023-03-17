@@ -15,6 +15,7 @@ namespace CreationdesModel.Controllers
         }
         public IActionResult Index()
         {
+           
             List<Voiture> voitures = db.Voitures.Include(m => m.marque).Include(m => m.Assurances).Include(m => m.Locations).ToList();
            foreach(Voiture v in voitures)
             {
