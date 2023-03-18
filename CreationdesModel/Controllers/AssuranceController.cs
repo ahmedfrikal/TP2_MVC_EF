@@ -9,17 +9,29 @@ namespace CreationdesModel.Controllers
     public class AssuranceController : Controller
     {
         private readonly Mycontext _context;
+        private static int voitureidmod;
         
         public AssuranceController(Mycontext context)
         {
-
             this._context = context;
         }
-
         public IActionResult Index()
         {
-          
             return View(_context.assurances.Include(a=>a.voiture).ToList());
+        }
+        public IActionResult Add(int id)
+        {
+            voitureidmod = id;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(Assurance assurance)
+        {
+            assurance.Id = "3";
+            assurance.voitureID=voitureidmod;
+            _context.assurances.Add(assurance);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
         public IActionResult Edit(string id)
         {
