@@ -16,7 +16,7 @@ namespace CreationdesModel.Controllers
         public IActionResult Index()
         {
            
-            List<Voiture> voitures = db.Voitures.Include(m => m.marque).Include(m => m.Assurances).Include(m => m.Locations).ToList();
+           List<Voiture> voitures = db.Voitures.Include(m => m.marque).Include(m => m.Assurances).Include(m => m.Locations).ToList();
            foreach(Voiture v in voitures)
             {
                 float PrixAssurance = 0;
@@ -130,11 +130,7 @@ namespace CreationdesModel.Controllers
                 db.Voitures.Remove(voiture);
                 db.SaveChanges();
             }
-       
-            else
-            {
-                return RedirectToAction(nameof(Index));
-            }
+     
             return RedirectToAction(nameof(Index));
 
         }

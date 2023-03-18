@@ -6,7 +6,6 @@ namespace CreationdesModel.Models
     {
         public int Id { get; set; }
         public string Matricule { get; set; }
-
         public int NbrPortes { get; set; }
         public int NbrPlaces { get; set;}
         public string photo { get; set;}
