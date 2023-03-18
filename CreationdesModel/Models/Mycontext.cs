@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using CreationdesModel.ModelView;
 
 namespace CreationdesModel.Models
 {
@@ -13,6 +14,7 @@ namespace CreationdesModel.Models
         {
 
         }
+        public DbSet<CreationdesModel.ModelView.LocationAddModelview>? LocationAddModelview { get; set; }
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Marque>().HasData(

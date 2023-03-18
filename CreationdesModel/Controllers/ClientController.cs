@@ -22,7 +22,6 @@ namespace CreationdesModel.Controllers
         {
 
             List<ClientAssuranceModelView> clients = _context.clients.Include(m => m.Locations).Select(c => new ClientAssuranceModelView(c)).ToList();
-            
             return View(clients);
         }
 
