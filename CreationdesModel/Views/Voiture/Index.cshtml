@@ -1,5 +1,4 @@
-﻿
-@model List<Voiture>
+﻿@model CreationdesModel.ModelView.PaginatedViewModel<Voiture>
 
 
 <a asp-controller="Voiture" asp-action="Add" class="btn btn-outline-primary">Ajouter Voiture </a>
@@ -15,7 +14,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(Voiture v in Model){
+        @foreach(Voiture v in Model.Items){
         <tr>
             <td><img src="~/images/@v.photo" > </td>
             <td>@v.Matricule</td>
@@ -24,9 +23,9 @@
                 <ul class="list-group">
              @foreach (Assurance assurance in v.Assurances)
              {  
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item active d-flex justify-content-between align-items-center">
                        @assurance.agence
-                                <p class="badge badge-primary badge-pill">@assurance.agence</p>
+                                
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         @assurance.date_debut
@@ -37,8 +36,8 @@
                         <span class="badge badge-primary badge-pill">@assurance.date_fin </span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        @assurance.prix
-                        <span class="badge badge-primary badge-pill">@assurance.prix </span>
+                        @assurance.prix DH
+                        <span class="badge badge-primary badge-pill">@assurance.prix dh </span>
                     </li>
                    }
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -81,3 +80,47 @@
         }
     </tbody>
 </table>
+
+@if (Model.TotalItems > Model.PageSize)
+{
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if (Model.PageIndex > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageIndex - 1, pageSize = Model.PageSize })">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+
+            @for (int i = 1; i <= Math.Ceiling((double)Model.TotalItems / Model.PageSize); i++)
+            {
+                if (i == Model.PageIndex)
+                {
+                    <li class="page-item">
+                        <a class="page-link" ><span>@i</span></a>
+             
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i, pageSize = Model.PageSize })">@i</a>
+                    </li>
+                   
+                }
+            }
+
+            @if (Model.PageIndex < Math.Ceiling((double)Model.TotalItems / Model.PageSize))
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageIndex + 1, pageSize = Model.PageSize })">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+      
+            }
+        </ul>
+    </nav>
+}

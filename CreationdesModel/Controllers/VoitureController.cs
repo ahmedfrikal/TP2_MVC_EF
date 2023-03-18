@@ -3,6 +3,7 @@ using CreationdesModel.ModelView;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing.Printing;
 
 namespace CreationdesModel.Controllers
 {
@@ -13,7 +14,7 @@ namespace CreationdesModel.Controllers
         { 
             this.db = db; 
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 1)
         {
            
            List<Voiture> voitures = db.Voitures.Include(m => m.marque).Include(m => m.Assurances).Include(m => m.Locations).ToList();
@@ -31,8 +32,23 @@ namespace CreationdesModel.Controllers
                     PrixLocation=PrixLocation+l.prix_jour;
                 }
                 v.prixLocation = PrixLocation;
-            }              
-            return View(voitures);
+            }
+            var items = voitures;
+            var totalItems = items.Count;
+
+            var paginatedItems = items.Skip((page - 1) * pageSize)
+                                       .Take(pageSize)
+                                       .ToList();
+
+            var model = new PaginatedViewModel<Voiture>
+            {
+                PageIndex = page,
+                PageSize = pageSize,
+                TotalItems = totalItems,
+                Items = paginatedItems
+            };
+
+            return View(model);
         }
         public IActionResult Add()
         {
