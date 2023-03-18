@@ -10,7 +10,11 @@ namespace CreationdesModel.ModelView
         public float getPrixTotal()
         {
             float prixtotal = 0;
-            
+            foreach(Location location in this.Locations)
+            {
+                int nbrAssurance = (location.date_fin - location.date_debut).Days;
+                prixtotal = prixtotal+(location.prix_jour * nbrAssurance);
+            }
             return prixtotal;
         }
         
@@ -20,12 +24,8 @@ namespace CreationdesModel.ModelView
             this.Nom = c.Nom;
             this.prenom = c.prenom;
             this.tel = c.tel;
-            foreach (Location location in c.Locations)
-            {
-                int nbrAssurance = (location.date_fin - location.date_debut).Days;
-                float prix = location.prix_jour * nbrAssurance;
-                this.prixTotal = this.prixTotal + prix;
-            }
+            this.Locations=c.Locations;
+            this.prixTotal = getPrixTotal();
         }
        
     }

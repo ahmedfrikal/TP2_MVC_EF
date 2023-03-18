@@ -16,16 +16,13 @@ namespace CreationdesModel.Controllers
         { 
             
             List<ClientAssuranceModelView> clients = _context.clients.Include(m => m.Locations).Select(c=>new ClientAssuranceModelView(c)).ToList();
-            /*foreach(Client client in clients)
-            {
-               foreach(Location location in client.Locations)
-                {
-                 int nbrAssurance = (location.date_fin - location.date_debut).Days;
-                 float prix=location.prix_jour*nbrAssurance;
-                 client.prixTotal =client.prixTotal + prix;
-                }
-            }*/
+            return View(clients);
+        }
+        public IActionResult clientLocationActive()
+        {
 
+            List<ClientAssuranceModelView> clients = _context.clients.Include(m => m.Locations).Select(c => new ClientAssuranceModelView(c)).ToList();
+            
             return View(clients);
         }
 

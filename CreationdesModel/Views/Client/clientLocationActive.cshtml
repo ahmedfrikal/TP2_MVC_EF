@@ -1,0 +1,33 @@
+﻿@model List<CreationdesModel.ModelView.ClientAssuranceModelView>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">cin</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Tel</th>
+            <th scope="col">prix total</th>
+            <th scope="col">Locations</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <th scope="row">@client.cin</th>
+                <td>@client.Nom</td>
+                <td>@client.prenom</td>
+                <td>@client.tel</td>
+                <td>@client.prixTotal </td>
+                @foreach(Location location in client.Locations)
+                @if(location.Retour==false){
+                    <td> en cours</td>
+                }
+            </tr>
+        }
+
+
+    </tbody>
+</table>
