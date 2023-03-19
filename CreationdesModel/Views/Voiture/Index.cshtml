@@ -14,7 +14,9 @@
         </tr>
     </thead>
     <tbody>
+        
         @foreach(Voiture v in Model.Items){
+            
         <tr>
             <td><img src="~/images/@v.photo" > </td>
             <td>@v.Matricule</td>
@@ -49,24 +51,24 @@
 
             <td>
             <ul class="list-group">
+                
                 @foreach (Location location in v.Locations)
                 {
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <li  class="list-group-item d-flex justify-content-between align-items-center">
                     @location.date_debut
                     
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     @location.date_fin
-                    <span class="badge badge-primary badge-pill">date fin</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    @location.prix_jour Dh
-                
+                    @location.prix_jour DH
                 </li>
                  }
                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                   Prix Total des Location:  @v.prixLocation Dh
+                   Prix Total des Location:  @v.prixLocation DH
                   </li>
+                        }
             </ul>
             </td>
             <td> 
@@ -74,7 +76,7 @@
                 <a asp-action="delete" asp-controller="Voiture" asp-route-id="@v.Id" class="btn btn-outline-danger"> Suprimer </a>
                     <a asp-action="Add" asp-controller="Assurance" asp-route-id="@v.Id" class="btn btn-outline-secondary"> Ajouter Assurance </a>
                     <a asp-action="Add" asp-controller="location" asp-route-id="@v.Id" class="btn btn-outline-info"> Ajouter Location </a>
-                <a asp-action="" asp-controller="" asp-route-id="" class="btn btn-outline-warning"> Retour Locations </a>
+                    <a asp-action="updateRetour" asp-controller="location" asp-route-id="@v.Id" class="btn btn-outline-warning"> Retour Locations </a>
             </td>
         </tr>
         }

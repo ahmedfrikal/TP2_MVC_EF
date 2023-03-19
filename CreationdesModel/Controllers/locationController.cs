@@ -2,6 +2,7 @@
 using CreationdesModel.ModelView;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace CreationdesModel.Controllers
 {
@@ -13,7 +14,17 @@ namespace CreationdesModel.Controllers
         {
             this.context = context;
         }
+        public IActionResult updateRetour(int id)
+        {
+            bool retourVoiture = context.locations.Where(e => e.voitureId == id).Select(l => l.Retour).FirstOrDefault();
+            if (retourVoiture == false)
+            {
+                retourVoiture = true;
+                context.SaveChanges();
+            }
 
+            return RedirectToAction("Index", "Voiture");
+        }
         public IActionResult Index()
         {
             return View();
