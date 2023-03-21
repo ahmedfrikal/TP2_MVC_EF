@@ -292,7 +292,10 @@ C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\A
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\CreationdesModel.pdb
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Faker.Net.6.0.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\itextsharp.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\MessagePack.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\MessagePack.Annotations.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -378,6 +381,7 @@ C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\A
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\de-DE\Faker.Net.6.0.resources.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -566,5 +570,3 @@ C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\A
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\CreationdesModel.pdb
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\CreationdesModel.genruntimeconfig.cache
 C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\obj\Debug\net6.0\ref\CreationdesModel.dll
-C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\Faker.Net.6.0.dll
-C:\Users\Ahmed\OneDrive\Bureau\Mon Espace de travail\EHEI\4eme anné\Semestre2\ASP\CreationdesModel\TP2_ASP_EFF\TP2_MVC_EF\CreationdesModel\bin\Debug\net6.0\de-DE\Faker.Net.6.0.resources.dll
