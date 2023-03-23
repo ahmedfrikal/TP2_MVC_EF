@@ -47,7 +47,6 @@ namespace CreationdesModel.Controllers
                 TotalItems = totalItems,
                 Items = paginatedItems
             };
-
             return View(model);
         }
         public IActionResult Add()

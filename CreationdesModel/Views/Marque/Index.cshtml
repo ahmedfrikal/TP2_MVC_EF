@@ -15,29 +15,27 @@
     </thead>
     <tbody>
 
-        <div class="alert alert-danger">
-            @Html.ValidationSummary()
-            @ViewData["error"]
-        </div>
+      
 
 
         @foreach (Marque item in Model)
         {
             <tr>
-             
+
                 <td>@item.Id</td>
                 <td>@item.Libelle</td>
                 <td>@item.Voitures.Count</td>
                 <td>
                     <select>
-                 @foreach(Voiture v in item.Voitures){
+                        @foreach (Voiture v in item.Voitures)
+                        {
                             <option>   @v.Matricule </option>
                         }
                     </select>
                 </td>
-              
+
                 <td>
-                    <a asp-controller="Marque" asp-action="edit" asp-route-id="@item.Id"  class="btn btn-secondary">Edit</a>
+                    <a asp-controller="Marque" asp-action="edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a>
                     <a asp-controller="Marque" asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Voulez vous vraiment suprimer ?');">Suprimmer</a>
                 </td>
             </tr>

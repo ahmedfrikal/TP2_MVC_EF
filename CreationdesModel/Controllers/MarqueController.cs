@@ -46,11 +46,13 @@ namespace CreationdesModel.Controllers
         [HttpPost]
         public IActionResult edit(Marque m)
         {
-           
+            
             if (ModelState.IsValid)
             {
-                _context.Update(m);
-                _context.SaveChangesAsync();
+                Marque marque = _context.marques.Find(m.Id);
+                marque.Libelle = m.Libelle;
+                _context.marques.Update(marque);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View();
